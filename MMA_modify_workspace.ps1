@@ -1,5 +1,7 @@
 ﻿#Powershell script to add or remove a Log Analytics workspace to the Microsoft Monitoring Agent
 #Usage - MMA-modify-workspace -action (list/add/remove) -workspaceID -workspaceKey
+#Mike Elliott - Nov 2020
+#ver 2020_11_18_001
 
 #initialise the script
 param(
