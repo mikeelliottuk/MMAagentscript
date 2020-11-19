@@ -1,5 +1,5 @@
 ﻿#Powershell script to add or remove a Log Analytics workspace to the Microsoft Monitoring Agent
-#Usage - MMA-modify-workspace -action (list/add/remove) -workspaceID -workspaceKey
+#Syntax - MMA-modify-workspace [-action list/add/remove] [-workspaceID <String[]>] [-workspaceKey <String[]>]
 #Mike Elliott - Nov 2020
 #ver 2020_11_18_003
 
@@ -40,6 +40,7 @@ Switch ($action) #choose code based on the script action selected - default is l
         Write-Output $PSItem.ToString()
         return 1
     }
+ Break
  }
  add { 
     try {
@@ -58,6 +59,7 @@ Switch ($action) #choose code based on the script action selected - default is l
         Write-Output $PSItem.ToString()
         return 1
     }
+ Break
  }
  remove {
     try {
@@ -76,6 +78,7 @@ Switch ($action) #choose code based on the script action selected - default is l
         Write-Output $PSItem.ToString()
         return 1
     }
+ Break
  }
  Default { $usage }
 }
